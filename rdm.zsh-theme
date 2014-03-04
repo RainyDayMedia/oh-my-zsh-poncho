@@ -25,13 +25,13 @@ function prompt_char {
 #     [ -f ~/.box-name ] && cat ~/.box-name || hostname -s
 # }
 
-# if [[ -s ~/.rvm/scripts/rvm ]] ; then
-#   RPS1="%{$fg[yellow]%}rvm:%{$reset_color%}%{$fg[red]%}\$(~/.rvm/bin/rvm-prompt)%{$reset_color%} $EPS1"
-# else
-#   if which rbenv &> /dev/null; then
-#     RPS1="%{$fg[yellow]%}rbenv:%{$reset_color%}%{$fg[red]%}\$(rbenv version | sed -e 's/ (set.*$//')%{$reset_color%} $EPS1"
-#   fi
-# fi
+if [[ -s ~/.rvm/scripts/rvm ]] ; then
+  RPS1="%{$fg[yellow]%}rvm:%{$reset_color%}%{$fg[red]%}\$(~/.rvm/bin/rvm-prompt)%{$reset_color%} $EPS1"
+else
+  if which rbenv &> /dev/null; then
+    RPS1="%{$fg[yellow]%}rbenv:%{$reset_color%}%{$fg[red]%}\$(rbenv version | sed -e 's/ (set.*$//')%{$reset_color%} $EPS1"
+  fi
+fi
 
 local rvm_ruby='$(rvm-prompt i v g)%{$reset_color%}'
 local current_dir='${PWD/#$HOME/~}'

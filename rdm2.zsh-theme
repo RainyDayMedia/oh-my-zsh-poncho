@@ -14,9 +14,10 @@ function virtualenv_info {
 }
 
 function prompt_char {
-    git branch >/dev/null 2>/dev/null && echo '±' && return
+    git branch >/dev/null 2>/dev/null && echo "$GIT_PROMPT_SYMBOL" && return
     hg root >/dev/null 2>/dev/null && echo '☿' && return
-    echo '○'
+    svn info >/dev/null 2>/dev/null && echo '∮' && return
+    echo '◇'
 }
 
 function box_name {
@@ -31,7 +32,9 @@ function box_name {
 autoload -U colors && colors # Enable colors in prompt
 
 # Modify the colors and symbols in these variables as desired.
-GIT_PROMPT_SYMBOL="%{$fg[blue]%}±"
+MER_PROMPT_SYMBOL="%{$FG[177]%}☿"
+SVN_PROMPT_SYMBOL="%{$FG[170]%}∮"
+GIT_PROMPT_SYMBOL="%{$FG[162]%}±"
 GIT_PROMPT_PREFIX="%{$FG[239]%} %{$reset_color%}"
 GIT_PROMPT_SUFFIX="%{$FG[239]%} %{$reset_color%}"
 GIT_PROMPT_AHEAD="%{$FG[239]%}⬆%{$reset_color%} "
@@ -131,8 +134,8 @@ function current_pwd {
 }
 
 PROMPT='
-╭─ $FG[033]%}$(current_pwd)%{$reset_color%} $(git_prompt_string)%{$reset_color%}
-╰─$(prompt_char) '
+%{$FG[239]%}╭─ %{$FG[033]%}$(current_pwd)%{$reset_color%} $(git_prompt_string)%{$reset_color%}
+%{$FG[239]%}╰─$(prompt_char) '
 
 export SPROMPT="Correct $fg[red]%R$reset_color to $fg[green]%r$reset_color [(y)es (n)o (a)bort (e)dit]? "
 

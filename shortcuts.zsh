@@ -9,6 +9,8 @@ alias cl='clear'
 alias ping-="ping -c 5"
 alias del="rm -Rf"
 alias myz="~/Projects/Forks/themes/shell/omz/omz_setup && l" # OPEN REPO
+alias cuts="subl ~/Projects/Forks/themes/shell/omz/omz_setup/shortcuts.zsh"
+alias funz="subl ~/Projects/Forks/themes/shell/omz/omz_setup/functions.zsh"
 alias profile="subl .zshrc"
 
 alias editssh='subl .ssh/known_hosts' # EDIT SSH HOSTS
@@ -68,6 +70,7 @@ alias gsh="git shortlog | grep -E '^[ ]+\w+' | wc -l"
 
 # gu shows a list of all developers and the number of commits they've made
 alias gu="git shortlog | grep -E '^[^ ]'"
+
 # -------------------------------------------------------------------
 # Capistrano aliases
 # -------------------------------------------------------------------
