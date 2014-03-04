@@ -8,3 +8,4 @@ just a few custom files and a simple theme hacked together from several others.
 * `/.oh-my-zsh/custom/shortcuts.zsh`
 * `/.oh-my-zsh/custom/functions.zsh`
 * `/.oh-my-zsh/themes/rdm.zsh-theme` *(thanks to eastwood and fino)*
+

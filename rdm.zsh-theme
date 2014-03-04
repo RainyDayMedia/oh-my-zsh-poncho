@@ -26,7 +26,9 @@ function prompt_char {
     fi
 }
 
-#RVM settings
+#-----------------------------
+# EASTWOOD STYLE RVM SETTINGS
+#-----------------------------
 if [[ -s ~/.rvm/scripts/rvm ]] ; then
   RPS1="%{$fg[yellow]%}rvm:%{$reset_color%}%{$fg[red]%}\$(~/.rvm/bin/rvm-prompt)%{$reset_color%} $EPS1"
 else
@@ -35,7 +37,11 @@ else
   fi
 fi
 
+#------------------------
+# FINO STYLE RVM SETTING
+#------------------------
 # local rvm_ruby='$(rvm-prompt i v g)%{$reset_color%}'
+
 local current_dir='${PWD/#$HOME/~}'
 local git_info='$(git_prompt_info)'
 
@@ -44,7 +50,9 @@ PROMPT="╭─ %{$terminfo[bold]$FG[033]%}${current_dir}%{$reset_color%}${git_in
 ╰─$(virtualenv_info)$(prompt_char) "
 
 
+#-------------------------------------------------------------------------------------
 # UNCOMMNET IF YOU WANT TO INCLUDE YOUR USER AND HOST IN YOUR PROMPT - JUST LIKE FINO
+#-------------------------------------------------------------------------------------
 # PROMPT="╭─%{$FG[040]%}%n%{$reset_color%} %{$FG[239]%}at%{$reset_color%} %{$FG[033]%}$(box_name)%{$reset_color%} %{$FG[239]%}in%{$reset_color%} %{$terminfo[bold]$FG[226]%}${current_dir}%{$reset_color%}${git_info} %{$FG[239]%}using%{$FG[243]%} ${rvm_ruby}
 # ╰─$(virtualenv_info)$(prompt_char) "
 
@@ -53,4 +61,7 @@ ZSH_THEME_GIT_PROMPT_SUFFIX=" %{$FG[239]%}]%{$reset_color%}%"
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$FG[160]%} ✘✘✘"
 ZSH_THEME_GIT_PROMPT_CLEAN="%{$FG[040]%} ✔"
 
+#----------------------------------
+# RIGHT PROMPT FOR FINO RVM STYLE
+#----------------------------------
 # RPROMPT=%{$fg[yellow]%}‹rvm:%{$reset_color%}%{$FG[239]%}%{$fg[red]%}${rvm_ruby}%{$fg[yellow]%}›%{$reset_color%}
