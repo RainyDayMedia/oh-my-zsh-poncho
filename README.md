@@ -16,11 +16,11 @@ I'm using iterm 2 with the [KitKat color scheme](https://github.com/zdj/themes) 
 ![rdm.zsh-theme](https://raw.github.com/edtv82/omz_setup/master/rdm_zsh-theme.png)
 
 **rdm2.zsh-theme**
-![rdm.zsh-theme](https://raw.github.com/edtv82/omz_setup/master/rdm_zsh-theme.png)
+![rdm.zsh-theme](https://raw.github.com/edtv82/omz_setup/master/rdm2_zsh-theme.png)
 
 
 
 #####TODO:
 
 1. better rvm integration
-2. clean up 
+2. clean up - optimize 
