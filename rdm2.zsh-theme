@@ -39,7 +39,7 @@ GIT_PROMPT_BEHIND="%{$fg[cyan]%}⬇%{$reset_color%} "
 GIT_PROMPT_MERGING="%{$fg_bold[magenta]%}⚡︎%{$reset_color%}"
 GIT_PROMPT_UNTRACKED="%F{yellow}✭ "
 GIT_PROMPT_MODIFIED="%F{blue}✹ "
-GIT_PROMPT_STAGED="%{$fg_bold[green]%}✚%{$reset_color%} "
+GIT_PROMPT_ADDED="%{$fg_bold[green]%}✚%{$reset_color%} "
 # Git prompt configuration
 GIT_PROMPT_DIRTY="%{$FG[160]%} ✘"
 GIT_PROMPT_CLEAN="%{$FG[040]%} ✔"
@@ -79,7 +79,7 @@ function parse_git_state() {
   fi
 
   if ! git diff --cached --quiet 2> /dev/null; then
-    GIT_STATE=$GIT_STATE$GIT_PROMPT_STAGED
+    GIT_STATE=$GIT_STATE$GIT_PROMPT_ADDED
   fi
 
   if [[ -n $GIT_STATE ]]; then
