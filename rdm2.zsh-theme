@@ -34,12 +34,12 @@ autoload -U colors && colors # Enable colors in prompt
 GIT_PROMPT_SYMBOL="%{$fg[blue]%}±"
 GIT_PROMPT_PREFIX="%{$fg[green]%} [%{$reset_color%}"
 GIT_PROMPT_SUFFIX="%{$fg[green]%}]%{$reset_color%}"
-GIT_PROMPT_AHEAD="%{$fg[red]%}ANUM%{$reset_color%}"
-GIT_PROMPT_BEHIND="%{$fg[cyan]%}BNUM%{$reset_color%}"
+GIT_PROMPT_AHEAD="%{$fg[red]%}⬆%{$reset_color%}"
+GIT_PROMPT_BEHIND="%{$fg[cyan]%}⬇%{$reset_color%}"
 GIT_PROMPT_MERGING="%{$fg_bold[magenta]%}⚡︎%{$reset_color%}"
-GIT_PROMPT_UNTRACKED="%{$fg_bold[red]%}u%{$reset_color%}"
-GIT_PROMPT_MODIFIED="%{$fg_bold[yellow]%}d%{$reset_color%}"
-GIT_PROMPT_STAGED="%{$fg_bold[green]%}s%{$reset_color%}"
+GIT_PROMPT_UNTRACKED="%F{red}✘✘✘%F{black} "
+GIT_PROMPT_MODIFIED="%F{blue}✹%F{black} "
+GIT_PROMPT_STAGED="%{$fg_bold[green]%}✚%{$reset_color%} "
 
 # Show Git branch/tag, or name-rev if on detached head
 function parse_git_branch() {
@@ -89,7 +89,7 @@ function parse_git_state() {
 # If inside a Git repository, print its branch and state
 function git_prompt_string() {
   local git_where="$(parse_git_branch)"
-  [ -n "$git_where" ] && echo "%{$FG[239]%}[git: %{$reset_color%}%{$fg[255]%}${git_where#(refs/heads/|tags/)}$(parse_git_state)"
+  [ -n "$git_where" ] && echo "%{$FG[239]%}\ue0a0 %{$fg[white]%}${git_where#(refs/heads/|tags/)}$(parse_git_state)"
 }
 
 # determine Ruby version whether using RVM or rbenv
@@ -117,6 +117,3 @@ PROMPT='
 export SPROMPT="Correct $fg[red]%R$reset_color to $fg[green]%r$reset_color [(y)es (n)o (a)bort (e)dit]? "
 
 RPROMPT='${PR_GREEN}$(virtualenv_info)%{$reset_color%} %{$fg[red]%}${ruby_version}%{$reset_color%}'
-
-ZSH_THEME_GIT_PROMPT_DIRTY="%{$FG[160]%} ✘✘✘"
-ZSH_THEME_GIT_PROMPT_CLEAN="%{$FG[040]%} ✔"
