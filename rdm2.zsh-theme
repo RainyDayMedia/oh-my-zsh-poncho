@@ -1,14 +1,14 @@
 # RDM theme by Ed Heltzel (http://rainydaymedia.net)
 # Use with a iterm 2 - kitkat color scheme (https://github.com/zdj/themes)
 # Regular Font - 12pt Inconsolata for Powerline Non-ASCII Font - 12pt Menlo Regular for Powerline
-# Meant for those who use rvm, rbenv and git, mercurial, bazaar
+# Meant for those who use rvm, rbenv and git, mercurial
 
 # You can set your computer name in the ~/.box-name file if you want.
 
 # Borrowing shamelessly from these oh-my-zsh themes:
 #   bira, robbyrussell, fino, eastwood
-#
-# Also borrowing from http://stevelosh.com/blog/2010/02/my-extravagant-zsh-prompt/
+# lots of borrowed shit
+
 function virtualenv_info {
     [ $VIRTUAL_ENV ] && echo '('`basename $VIRTUAL_ENV`') '
 }
