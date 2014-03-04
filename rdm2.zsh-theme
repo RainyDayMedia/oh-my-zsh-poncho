@@ -1,4 +1,4 @@
-# RDM theme by Ed Heltzel (http://rainydaymedia.net)
+# RDM2 theme by Ed Heltzel (http://rainydaymedia.net)
 # Use with a iterm 2 - kitkat color scheme (https://github.com/zdj/themes)
 # Regular Font - 12pt Inconsolata for Powerline Non-ASCII Font - 12pt Menlo Regular for Powerline
 # Meant for those who use rvm, rbenv and git, mercurial
