@@ -32,8 +32,8 @@ autoload -U colors && colors # Enable colors in prompt
 
 # Modify the colors and symbols in these variables as desired.
 GIT_PROMPT_SYMBOL="%{$fg[blue]%}±"
-GIT_PROMPT_PREFIX="%{$fg[white]%} %{$reset_color%}"
-GIT_PROMPT_SUFFIX="%{$fg[white]%} %{$reset_color%}"
+GIT_PROMPT_PREFIX="%{$FG[239]%} %{$reset_color%}"
+GIT_PROMPT_SUFFIX="%{$FG[239]%} %{$reset_color%}"
 GIT_PROMPT_AHEAD="%{$FG[239]%}⬆%{$reset_color%} "
 GIT_PROMPT_BEHIND="%{$FG[239]%}⬇%{$reset_color%} "
 GIT_PROMPT_MERGING="%{$fg_bold[magenta]%}⚡︎%{$reset_color%}"
@@ -41,7 +41,7 @@ GIT_PROMPT_UNTRACKED="%F{yellow}✭ "
 GIT_PROMPT_MODIFIED="%F{blue}✹ "
 GIT_PROMPT_ADDED="%{$fg_bold[green]%}✚%{$reset_color%} "
 # Git prompt configuration
-GIT_PROMPT_DIRTY="%{$FG[160]%} ✘"
+GIT_PROMPT_DIRTY="%{$FG[160]%} ✘✘✘"
 GIT_PROMPT_CLEAN="%{$FG[040]%} ✔"
 
 # Show Git branch/tag, or name-rev if on detached head
@@ -131,7 +131,7 @@ function current_pwd {
 }
 
 PROMPT='
-╭─ $FG[033]%}$(current_pwd)%{$reset_color%} $(git_prompt_string)
+╭─ $FG[033]%}$(current_pwd)%{$reset_color%} $(git_prompt_string)%{$reset_color%}
 ╰─$(prompt_char) '
 
 export SPROMPT="Correct $fg[red]%R$reset_color to $fg[green]%r$reset_color [(y)es (n)o (a)bort (e)dit]? "
