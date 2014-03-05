@@ -117,6 +117,6 @@ PROMPT='
 %{$FG[239]%}╭─ %{$FG[033]%}$(current_pwd)%{$reset_color%} $(git_prompt_string)%{$reset_color%}
 %{$FG[239]%}╰─$(prompt_char) '
 
-RPROMPT=%{$fg[yellow]%}‹rvm:%{$reset_color%}%{$FG[239]%}%{$fg[red]%}${rvm_ruby}%{$fg[yellow]%}›%{$reset_color%}
+RPROMPT=%{$fg[yellow]%}rvm:%{$reset_color%}%{$FG[239]%}%{$fg[red]%}${rvm_ruby}
 
 export SPROMPT="Correct $fg[red]%R$reset_color to $fg[green]%r$reset_color [(y)es (n)o (a)bort (e)dit]? "
