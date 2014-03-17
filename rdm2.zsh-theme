@@ -15,8 +15,8 @@ function virtualenv_info {
 
 function prompt_char {
     git branch >/dev/null 2>/dev/null && echo "$GIT_PROMPT_SYMBOL" && return
-    hg root >/dev/null 2>/dev/null && echo '☿' && return
-    svn info >/dev/null 2>/dev/null && echo '∮' && return
+    hg root >/dev/null 2>/dev/null && echo "$MER_PROMPT_SYMBOL" && return
+    svn info >/dev/null 2>/dev/null && echo "$SVN_PROMPT_SYMBOL" && return
     echo '◇'
 }
 
