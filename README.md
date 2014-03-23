@@ -13,7 +13,7 @@ I'm using [iTerm2](http://www.iterm2.com/#/section/home) with the [kitkat color 
 
 1. Clone the repo:  
 `git clone git@github.com:edtv82/oh-my-zsh-rdm-theme.git`
-2. Create a symlink of **rdm.zsh-theme** in **~/.oh-my-zsh/themes/**. 
+2. Create a symlink of **rdm2.zsh-theme** in **~/.oh-my-zsh/themes/**. 
 	* `ln -s /Path/to/original/folder ~/oh-my-zsh/themes/rdm2.zsh-theme ` 
 	* Alternatively - You can use the install script **install_rdm2_theme.sh**:
 `./install_rdm2_theme.sh`
