@@ -35,3 +35,4 @@ I'm using [iTerm2](http://www.iterm2.com/#/section/home) with the [kitkat color 
 1. ~~better rvm integration~~
 2. ~~clean up - optimize~~
 3. better git awareness
+    * fix git awareness on rdm to match rdm2
