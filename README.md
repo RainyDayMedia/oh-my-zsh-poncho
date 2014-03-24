@@ -1,4 +1,4 @@
-## oh-my-zsh custom theme
+## An RDM custom theme oh-my-zsh 
 
 Two flavors of the RDM Theme for [OH-MY-ZSH](https://github.com/robbyrussell/oh-my-zsh) that are both git aware.  
 
