@@ -21,6 +21,13 @@ I'm using [iTerm2](http://www.iterm2.com/#/section/home) with the [kitkat color 
 3. Configure the theme in your **.zshrc** file:  
 `ZSH_THEME="rdm2"` 
 
+## TODO:
+
+1. ~~better rvm integration~~
+2. ~~clean up - optimize~~
+3. better git awareness
+    * fix git awareness on rdm to match rdm2
+
 ## Screen shots:
 
 **rdm.zsh-theme:**
@@ -30,9 +37,3 @@ I'm using [iTerm2](http://www.iterm2.com/#/section/home) with the [kitkat color 
 ![rdm.zsh-theme](https://raw.github.com/edtv82/omz_setup/master/preview-rdm2_theme.png)
 
 
-## TODO:
-
-1. ~~better rvm integration~~
-2. ~~clean up - optimize~~
-3. better git awareness
-    * fix git awareness on rdm to match rdm2
