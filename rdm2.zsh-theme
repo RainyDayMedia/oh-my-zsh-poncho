@@ -17,7 +17,7 @@ function prompt_char {
     git branch >/dev/null 2>/dev/null && echo "$GIT_PROMPT_SYMBOL" && return
     hg root >/dev/null 2>/dev/null && echo "$MER_PROMPT_SYMBOL" && return
     svn info >/dev/null 2>/dev/null && echo "$SVN_PROMPT_SYMBOL" && return
-    echo '◇'
+    echo '◇'%{$reset_color%}
 }
 
 function box_name {
@@ -115,8 +115,11 @@ function current_pwd {
 
 PROMPT='
 %{$FG[239]%}╭─ %{$FG[033]%}$(current_pwd)%{$reset_color%} $(git_prompt_string)%{$reset_color%}
-%{$FG[239]%}╰─$(prompt_char) '
+%{$FG[239]%}╰─$(prompt_char)%{$reset_color%} '
 
-RPROMPT=%{$fg[yellow]%}rvm:%{$reset_color%}%{$FG[239]%}%{$fg[red]%}${rvm_ruby}
+# RPROMPT=%{$fg[yellow]%}rvm:%{$reset_color%}%{$FG[239]%}%{$fg[red]%}${rvm_ruby}
+
+# Add the battery status to right-side of prompt -- add the oh-my-zsh battery plugin to your zshrc
+RPROMPT='$(battery_pct)'
 
 export SPROMPT="Correct $fg[red]%R$reset_color to $fg[green]%r$reset_color [(y)es (n)o (a)bort (e)dit]? "
