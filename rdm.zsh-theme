@@ -39,7 +39,7 @@ local git_info='$(git_prompt_info)'
 
 
 PROMPT="╭─ %{$terminfo[bold]$FG[033]%}${current_dir}%{$reset_color%}${git_info} %{$FG[255]%}%{$FG[255]%}
-╰─$(virtualenv_info)$(prompt_char) "
+╰─$(virtualenv_info)$(prompt_char)%{$reset_color%} "
 
 
 #-------------------------------------------------------------------------------------
