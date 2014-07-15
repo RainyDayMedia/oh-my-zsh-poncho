@@ -1,5 +1,5 @@
 # RDM2 theme by Ed Heltzel (http://rainydaymedia.net)
-# Use with a iterm 2 - kitkat color scheme (https://github.com/zdj/themes)
+# Use with a iterm 2 - DarkNeon color scheme (https://github.com/RainyDayMedia/DarkNeon)
 # Regular Font - 12pt Inconsolata for Powerline Non-ASCII Font - 12pt Menlo Regular for Powerline
 # Meant for those who use rvm, rbenv and git, mercurial
 
@@ -43,6 +43,7 @@ GIT_PROMPT_MERGING="%{$fg_bold[magenta]%}⚡︎%{$reset_color%}"
 GIT_PROMPT_UNTRACKED="%{$FG[003]%}✭ "
 GIT_PROMPT_MODIFIED="%{$FG[014]%}▲ "
 GIT_PROMPT_ADDED="%{$FG[002]%}✚%{$reset_color%} "
+
 # Git prompt configuration
 GIT_PROMPT_DIRTY="%{$FG[160]%} ✘✘✘"
 GIT_PROMPT_CLEAN="%{$FG[040]%} ✔"
