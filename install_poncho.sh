@@ -1,6 +1,6 @@
 #!/bin/sh
 
-echo "Creating a symlink for the RDM2 theme to your oh-my-zsh themes path..."
+echo "Creating a symlink for the RDM theme to your oh-my-zsh themes path..."
 
 ln -f the_poncho.zsh-theme ~/.oh-my-zsh/themes/the_poncho.zsh-theme
 
