@@ -2,10 +2,10 @@
 
 echo "Creating a symlink for the RDM2 theme to your oh-my-zsh themes path..."
 
-ln -f rdm2.zsh-theme ~/.oh-my-zsh/themes/rdm2.zsh-theme
+ln -f the_poncho.zsh-theme ~/.oh-my-zsh/themes/the_poncho.zsh-theme
 
 echo "
-Oh Snap! The theme is installed -> ~/.oh-my-zsh/themes/rdm2.zsh-theme
+Oh Snap! The theme is installed -> ~/.oh-my-zsh/themes/the_poncho.zsh-theme
 
 ----------------------------------------------------------------------------------
 
