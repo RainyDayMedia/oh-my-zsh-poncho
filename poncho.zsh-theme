@@ -1,6 +1,6 @@
-# RDM theme by Ed Heltzel (http://rainydaymedia.net)
-# Use with a iterm 2 - kitkat color scheme (https://github.com/zdj/themes)
-# Regular Font - 12pt Inconsolata for Powerline Non-ASCII Font - 12pt Menlo Regular for Powerline
+# An RDM Theme called Poncho by Ed Heltzel (http://rainydaymedia.net)
+# Use with iTerm 2 - the kitkat color scheme (https://github.com/zdj/themes)
+# Regular Font - 12pts Source Code Pro Non-ASCII Font - 12pt Source Code Pro Powerline
 # Meant for those who use rvm, rbenv and git, mercurial, bazaar
 
 # You can set your computer name in the ~/.box-name file if you want.
