@@ -31,9 +31,9 @@ I'm using [iTerm2](http://www.iterm2.com/#/section/home) with the [RDM2 color sc
 ## Screen shots:
 
 **rdm.zsh-theme:**
-![rdm.zsh-theme](https://raw.github.com/ginfuru/omz_setup/master/preview-rdm_theme.png)
+![rdm.zsh-theme](https://raw.githubusercontent.com/RainyDayMedia/oh-my-zsh-RDMTheme/master/preview-rdm_theme.png)
 
 **rdm2.zsh-theme:**
-![rdm.zsh-theme](https://raw.github.com/ginfuru/omz_setup/master/rdm2_theme.png)
+![rdm.zsh-theme](https://raw.githubusercontent.com/RainyDayMedia/oh-my-zsh-RDMTheme/master/rdm2-theme.png)
 
 
