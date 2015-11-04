@@ -18,7 +18,7 @@ The Rain Coat gif is using again the same but the iTerm2 color scheme is a sligh
 
 ##### Screen shots:
 
-**rain_coat.zsh-theme:** -- *the last copy of commands are an attempt to show error handling*
+**rain_coat.zsh-theme:** -- *the last command are an attempt to show error handling*
 ![rain_coat.zsh-theme](https://raw.githubusercontent.com/RainyDayMedia/oh-my-zsh-RDMTheme/master/preview-rain_coat.gif)
 
 **poncho.zsh-theme:**
