@@ -2,12 +2,7 @@
 # Use with iTerm 2 - the kitkat color scheme (https://github.com/zdj/themes)
 # Regular Font - 12pt Source Code Pro Non-ASCII Font - 12pt Source Code Pro Powerline
 # Meant for those who use rvm, rbenv and git, mercurial, svn
-
-# You can set your computer name in the ~/.box-name file if you want.
-
-# Borrowing shamelessly from these oh-my-zsh themes:
-#   bira, robbyrussell, fino, eastwood
-# lots of borrowed shit
+# Borrowing shamelessly from these oh-my-zsh themes: robbyrussell, fino, eastwood and lots of borrowed shit from the the inner-webs
 
 function virtualenv_info {
     [ $VIRTUAL_ENV ] && echo '('`basename $VIRTUAL_ENV`') '
@@ -20,6 +15,7 @@ function prompt_char {
     echo '◇'%{$reset_color%}
 }
 
+# You can set your computer name in the ~/.box-name file if you want.
 function box_name {
     [ -f ~/.box-name ] && cat ~/.box-name || hostname -s
 }

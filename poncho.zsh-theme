@@ -1,15 +1,8 @@
 # An RDM Theme called Poncho by Ed Heltzel (http://rainydaymedia.net)
 # Use with iTerm 2 - the kitkat color scheme (https://github.com/zdj/themes)
 # Regular Font - 12pts Source Code Pro Non-ASCII Font - 12pt Source Code Pro Powerline
+# Borrowing shamelessly from these oh-my-zsh themes: robbyrussell, fino, eastwood and lots of borrowed shit from the the inner-webs
 # Meant for those who use rvm, rbenv and git, mercurial, bazaar
-
-# You can set your computer name in the ~/.box-name file if you want.
-
-# Borrowing shamelessly from these oh-my-zsh themes:
-#   bira, robbyrussell, fino, eastwood
-#
-# Also borrowing from http://stevelosh.com/blog/2010/02/my-extravagant-zsh-prompt/
-
 
 function virtualenv_info {
     [ $VIRTUAL_ENV ] && echo '('`basename $VIRTUAL_ENV`') '
@@ -20,6 +13,8 @@ function prompt_char {
   hg root >/dev/null 2>/dev/null && echo '☿' && return
   echo '◇'
 }
+
+# You can set your computer name in the ~/.box-name file if you want.
 
 # function box_name {
 #     [ -f ~/.box-name ] && cat ~/.box-name || hostname -s

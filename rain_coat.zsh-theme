@@ -2,13 +2,14 @@
 # Use with iTerm 2 - Slightly Customized [Oceanic Next](https://github.com/voronianski/oceanic-next-color-scheme)
 # Regular Font - 11pt Inconsolata for Powerlines Non-ASCII Font - 13pt Inconsolata for Powerlines Powerline
 # Meant for those who use rbenv and git, mercurial, svn
-# You can set your computer name in the ~/.box-name file if you want.
-# Borrowing shamelessly from these oh-my-zsh themes: bira, robbyrussell, fino, eastwood and lots of borrowed shit from the the inner-webs
+
+# Borrowing shamelessly from these oh-my-zsh themes: robbyrussell, fino, eastwood and lots of borrowed shit from the the inner-webs
 
 function virtualenv_info {
     [ $VIRTUAL_ENV ] && echo '('`basename $VIRTUAL_ENV`') '
 }
 
+# You can set your computer name in the ~/.box-name file if you want.
 function box_name {
     [ -f ~/.box-name ] && cat ~/.box-name || hostname -s
 }
