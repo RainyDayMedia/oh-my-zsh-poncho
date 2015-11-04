@@ -1,7 +1,7 @@
-# An RDM theme called The Poncho by Ed Heltzel (http://rainydaymedia.net)
-# Use with iTerm 2 - the kitkat color scheme (https://github.com/zdj/themes)
-# Regular Font - 12pt Source Code Pro Non-ASCII Font - 12pt Source Code Pro Powerline
-# Meant for those who use rvm, rbenv and git, mercurial, svn
+# RDM2 theme by Ed Heltzel (http://rainydaymedia.net)
+# Use with a iterm 2 - OceanincNext iterm2 theme
+# Regular Font - 12pts Source Code Pro Non-ASCII Font - 12pt Octicons
+# Meant for those who use rvm, rbenv and git, mercurial
 
 # You can set your computer name in the ~/.box-name file if you want.
 
@@ -32,21 +32,21 @@ function box_name {
 autoload -U colors && colors # Enable colors in prompt
 
 # Modify the colors and symbols in these variables as desired.
-MER_PROMPT_SYMBOL="%{$FG[177]%}☿" #Mercurial
-SVN_PROMPT_SYMBOL="%{$FG[170]%}∮" #SVN
-GIT_PROMPT_SYMBOL="%{$FG[162]%}±" #Git
+MER_PROMPT_SYMBOL="%{$FG[177]%}☿"
+SVN_PROMPT_SYMBOL="%{$FG[170]%}∮"
+GIT_PROMPT_SYMBOL="%{$FG[162]%}±"
 GIT_PROMPT_PREFIX="%{$fg[black]%} %{$reset_color%}"
 GIT_PROMPT_SUFFIX="%{$fg[black]%} %{$reset_color%}"
-GIT_PROMPT_AHEAD="%{$fg[yellow]%}⬆%{$reset_color%} "
-GIT_PROMPT_BEHIND="%{$fg[yellow]%}⬇%{$reset_color%} "
-GIT_PROMPT_MERGING="%{$fg_bold[magenta]%}⚡︎%{$reset_color%}"
-GIT_PROMPT_UNTRACKED="%{$fg[yellow]%}✭ "
-GIT_PROMPT_MODIFIED="%{$fg[cyan]%}▲ "
-GIT_PROMPT_ADDED="%{$fg[green]%}✚%{$reset_color%} "
+GIT_PROMPT_AHEAD="%{$fg[yellow]%}%{$reset_color%} " #push
+GIT_PROMPT_BEHIND="%{$fg[yellow]%}%{$reset_color%} " #pull
+GIT_PROMPT_MERGING="%{$fg_bold[magenta]%}%{$reset_color%}"
+GIT_PROMPT_UNTRACKED="%{$fg[yellow]%} "
+GIT_PROMPT_MODIFIED="%{$fg[cyan]%} "
+GIT_PROMPT_ADDED="%{$fg[green]%}%{$reset_color%} "
 
 # Git prompt configuration
-GIT_PROMPT_DIRTY="%{$fg[red]%} ✘✘✘"
-GIT_PROMPT_CLEAN="%{$fg[green]%} ✔"
+GIT_PROMPT_DIRTY="%{$fg[red]%} "
+GIT_PROMPT_CLEAN="%{$fg[green]%} "
 
 # Show Git branch/tag, or name-rev if on detached head
 function parse_git_branch() {
@@ -104,7 +104,7 @@ git_dirty() {
 # If inside a Git repository, print its branch and state
 function git_prompt_string() {
   local git_where="$(parse_git_branch)"
-  [ -n "$git_where" ] && echo "%{$FG[239]%}\ue0a0 %{$fg[white]%}${git_where#(refs/heads/|tags/)}$(git_dirty)$(parse_git_state)"
+  [ -n "$git_where" ] && echo "%{$FG[008]%} %{$fg[white]%}${git_where#(refs/heads/|tags/)}$(git_dirty)$(parse_git_state)"
 }
 
 # RVM Stuff
@@ -115,8 +115,8 @@ function current_pwd {
 }
 
 PROMPT='
-%{$FG[008]%}╭─%{$fg[blue]%}$(current_pwd)%{$reset_color%} $(git_prompt_string)%{$reset_color%}
-%{$FG[008]%}╰─$(prompt_char)%{$reset_color%}'
+%{$FG[008]%}╭─  %{$fg[blue]%}$(current_pwd)%{$reset_color%} $(git_prompt_string)%{$reset_color%}
+%{$FG[008]%}╰─$(prompt_char)%{$reset_color%} '
 
 # RPROMPT=%{$fg[yellow]%}rvm:%{$reset_color%}%{$FG[239]%}%{$fg[red]%}${rvm_ruby}
 

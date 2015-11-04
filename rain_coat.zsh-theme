@@ -1,23 +1,12 @@
-# An RDM theme called The Poncho by Ed Heltzel (http://rainydaymedia.net)
-# Use with iTerm 2 - the kitkat color scheme (https://github.com/zdj/themes)
-# Regular Font - 12pt Source Code Pro Non-ASCII Font - 12pt Source Code Pro Powerline
-# Meant for those who use rvm, rbenv and git, mercurial, svn
-
+# An Oh-My-ZSH theme called the Rain Cout by Ed Heltzel @ginfuru
+# Use with iTerm 2 - Slightly Customized [Oceanic Next](https://github.com/voronianski/oceanic-next-color-scheme)
+# Regular Font - 11pt Inconsolata for Powerlines Non-ASCII Font - 13pt Inconsolata for Powerlines Powerline
+# Meant for those who use rbenv and git, mercurial, svn
 # You can set your computer name in the ~/.box-name file if you want.
-
-# Borrowing shamelessly from these oh-my-zsh themes:
-#   bira, robbyrussell, fino, eastwood
-# lots of borrowed shit
+# Borrowing shamelessly from these oh-my-zsh themes: bira, robbyrussell, fino, eastwood and lots of borrowed shit from the the inner-webs
 
 function virtualenv_info {
     [ $VIRTUAL_ENV ] && echo '('`basename $VIRTUAL_ENV`') '
-}
-
-function prompt_char {
-    git branch >/dev/null 2>/dev/null && echo "$GIT_PROMPT_SYMBOL" && return
-    hg root >/dev/null 2>/dev/null && echo "$MER_PROMPT_SYMBOL" && return
-    svn info >/dev/null 2>/dev/null && echo "$SVN_PROMPT_SYMBOL" && return
-    echo '◇'%{$reset_color%}
 }
 
 function box_name {
@@ -32,9 +21,6 @@ function box_name {
 autoload -U colors && colors # Enable colors in prompt
 
 # Modify the colors and symbols in these variables as desired.
-MER_PROMPT_SYMBOL="%{$FG[177]%}☿" #Mercurial
-SVN_PROMPT_SYMBOL="%{$FG[170]%}∮" #SVN
-GIT_PROMPT_SYMBOL="%{$FG[162]%}±" #Git
 GIT_PROMPT_PREFIX="%{$fg[black]%} %{$reset_color%}"
 GIT_PROMPT_SUFFIX="%{$fg[black]%} %{$reset_color%}"
 GIT_PROMPT_AHEAD="%{$fg[yellow]%}⬆%{$reset_color%} "
@@ -46,7 +32,7 @@ GIT_PROMPT_ADDED="%{$fg[green]%}✚%{$reset_color%} "
 
 # Git prompt configuration
 GIT_PROMPT_DIRTY="%{$fg[red]%} ✘✘✘"
-GIT_PROMPT_CLEAN="%{$fg[green]%} ✔"
+GIT_PROMPT_CLEAN="%{$FG[154]%} ✔"
 
 # Show Git branch/tag, or name-rev if on detached head
 function parse_git_branch() {
@@ -104,23 +90,18 @@ git_dirty() {
 # If inside a Git repository, print its branch and state
 function git_prompt_string() {
   local git_where="$(parse_git_branch)"
-  [ -n "$git_where" ] && echo "%{$FG[239]%}\ue0a0 %{$fg[white]%}${git_where#(refs/heads/|tags/)}$(git_dirty)$(parse_git_state)"
+  [ -n "$git_where" ] && echo "%{$FG[243]%}\ue0a0%{$fg[white]%}${git_where#(refs/heads/|tags/)}$(git_dirty)$(parse_git_state)"
 }
-
-# RVM Stuff
-local rvm_ruby='$(rvm-prompt i v g)%{$reset_color%}'
 
 function current_pwd {
   echo $(pwd | sed -e "s,^$HOME,~,")
 }
 
-PROMPT='
-%{$FG[008]%}╭─%{$fg[blue]%}$(current_pwd)%{$reset_color%} $(git_prompt_string)%{$reset_color%}
-%{$FG[008]%}╰─$(prompt_char)%{$reset_color%}'
+local ret_status="%(?:%{$fg_bold[green]%}» :%{$fg_bold[red]%}» %s)"
 
-# RPROMPT=%{$fg[yellow]%}rvm:%{$reset_color%}%{$FG[239]%}%{$fg[red]%}${rvm_ruby}
+PROMPT='%{$fg[magenta]%}$(current_pwd) $(git_prompt_string)%{$reset_color%}
+${ret_status} '
 
-# Add the battery status to right-side of prompt -- add the oh-my-zsh battery plugin to your zshrc
-RPROMPT='$(battery_pct_prompt)%{$reset_color%}'
+RPROMPT='%{$fg[white]%}$(battery_pct_prompt)%{$reset_color%}' # Add the battery status to right-side of prompt -- add the oh-my-zsh battery plugin to your zshrc
 
 export SPROMPT="Correct $fg[red]%R$reset_color to $fg[green]%r$reset_color [(y)es (n)o (a)bort (e)dit]? "
