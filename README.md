@@ -1,7 +1,7 @@
 ## Oh My ZSH themes
 by those cloud junkies over at [Rainy Day Media](http://rainydaymedia.net)
 
-All three *(3)* flavors of the Poncho are ***“git aware”*** and specifically designed for [OH-MY-ZSH](https://github.com/robbyrussell/oh-my-zsh) 
+All three *(3)* flavors of the Poncho are ***“git aware”*** and specifically designed for [OH-MY-ZSH](https://github.com/robbyrussell/oh-my-zsh)
 
 >Each are inspired and borrowing from:
 
@@ -18,7 +18,7 @@ The Rain Coat gif is using again the same but the iTerm2 color scheme is a sligh
 
 ##### Screen shots:
 
-**rain_coat.zsh-theme:** -- *the last command are an attempt to show error handling*
+**rain_coat.zsh-theme:** -- *the last command is an attempt to show error notification handling*
 ![rain_coat.zsh-theme](https://raw.githubusercontent.com/RainyDayMedia/oh-my-zsh-RDMTheme/master/preview-rain_coat.gif)
 
 **poncho.zsh-theme:**

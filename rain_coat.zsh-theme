@@ -2,7 +2,6 @@
 # Use with iTerm 2 - Slightly Customized [Oceanic Next](https://github.com/voronianski/oceanic-next-color-scheme)
 # Regular Font - 11pt Inconsolata for Powerlines Non-ASCII Font - 13pt Inconsolata for Powerlines Powerline
 # Meant for those who use rbenv and git, mercurial, svn
-
 # Borrowing shamelessly from these oh-my-zsh themes: robbyrussell, fino, eastwood and lots of borrowed shit from the the inner-webs
 
 function virtualenv_info {
@@ -93,7 +92,7 @@ function git_prompt_string() {
   local git_where="$(parse_git_branch)"
   [ -n "$git_where" ] && echo "%{$FG[243]%}\ue0a0%{$fg[white]%}${git_where#(refs/heads/|tags/)}$(git_dirty)$(parse_git_state)"
 }
-
+# Present working directory
 function current_pwd {
   echo $(pwd | sed -e "s,^$HOME,~,")
 }
